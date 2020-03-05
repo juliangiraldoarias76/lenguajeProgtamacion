@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+>
+    <h:head>
+        <title>Menu Principal</title>
+    </h:head>
+    <h:body>
+       <center><h1>Menu Principal</h1></center>
+       <center>
+           <h:form>
+               <h2>Seleccione Lo Que Quiere Hacer</h2>
+               <p:panelGrid columns="3">
+                   <p:commandButton value="Crear cliente" action="#{usuarioBean.crearCliente}"/>
+                  
+                   <p:commandButton value="Consultar cliente" action="#{usuarioBean.comsutarCliente()}"/>
+                   
+                   <p:commandButton value="Editar cliente" action="#{usuarioBean.editarCliente()}"/> 
+                   
+               </p:panelGrid>              
+               <br/>
+
+               
+           </h:form>
+                      
+           
+        </center>
+    </h:body>
+</html>

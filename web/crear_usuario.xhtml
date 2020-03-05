@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+        <title>Creacion De Clientes</title>
+    </h:head>
+    <body>
+        <center><h1>CREAR CLIENTE</h1></center>
+       <center>
+           <h:form>
+               <h2>Ingrese Los Datos Del Cliente</h2>
+               <p:panelGrid columns="3">
+                   <h:outputText value="Cedula"></h:outputText>
+                   <p:inputText id="cedula" value="#{clientesBean.cedula}" required="true" requiredMessage="se requiere la cedula" ></p:inputText>
+                   <p:message for="cedula" id="mensajecedula"/>
+                   
+                   <h:outputText value="Nombres"></h:outputText>
+                   <p:inputText id="nombres" value="#{clientesBean.nombres}" required="true" requiredMessage="se requieren los nombres"></p:inputText>
+                   <p:message for="nombres" id="mensajenombres"/>
+                   
+                   <h:outputText value="Apellidos"></h:outputText>
+                   <p:inputText id="apellidos" value="#{clientesBean.apellidos}" required="true" requiredMessage="se requieren los apellidos"></p:inputText>
+                   <p:message for="apellidos" id="mensajeapellidos"/>
+                   
+                   <h:outputText value="Direccion"></h:outputText>
+                   <p:inputText id="direccion" value="#{clientesBean.direccion}" required="true" requiredMessage="se requieren la direccion"></p:inputText>
+                   <p:message for="direccion" id="mensajedireccion"/>
+                   
+                   <h:outputText value="Correo"></h:outputText>
+                   <p:inputText id="correo" value="#{clientesBean.correo}" required="true" requiredMessage="se requiere el correo"></p:inputText>
+                   <p:message for="correo" id="mensajecorreo"/>
+                   
+               </p:panelGrid>
+               <br />
+               <p:commandButton value="CREAR USUARIO"  action="#{clientesBean.crearCliente}" update="psalida, mensajecedula, mensajenombres,mensajecorreo,mensajedireccion,mensajeapellidos " />    
+               <br />
+               <br />
+               <a href='menu_principal.xhtml'>Volver al Menu</a>
+               <br />
+           
+              <p:outputPanel id="psalida">
+                    <h:outputText escape="false" value="#{clientesBeans.respuesta}"></h:outputText>
+                </p:outputPanel>
+               
+           </h:form>
+
+        </center>
+    </body>
+</html>
